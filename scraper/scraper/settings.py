@@ -1,3 +1,5 @@
+from .OffsiteMiddleware import OffsiteMiddleware
+
 # Scrapy settings for scraper project
 #
 # For simplicity, this file contains only settings considered important or
@@ -96,6 +98,12 @@ FEED_EXPORT_ENCODING = "utf-8"
 #ITEM_PIPELINES = {"scrapy.pipelines.files.FilesPipeline": 1}
 ITEM_PIPELINES = {"scraper.pipelines.CustomFilesPipeline": 1}
 # Define where files are stored
-FILES_STORE = "scraped_pdfs"
+FILES_STORE = "scraped_data"
 # Set number of days after which sraped files expire
 FILES_EXPIRES = 0
+
+# Overwrite the original OffsiteMiddleware with new customized OffsiteMiddleware
+SPIDER_MIDDLEWARES = {
+    "scrapy.spidermiddlewares.offsite.OffsiteMiddleware": None,
+    OffsiteMiddleware: 500,
+}
