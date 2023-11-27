@@ -98,7 +98,7 @@ FEED_EXPORT_ENCODING = "utf-8"
 #ITEM_PIPELINES = {"scrapy.pipelines.files.FilesPipeline": 1}
 ITEM_PIPELINES = {"scraper.pipelines.CustomFilesPipeline": 1}
 # Define where files are stored
-FILES_STORE = "scraped_data"
+FILES_STORE = "../data/scraped_data"
 # Set number of days after which sraped files expire
 FILES_EXPIRES = 0
 

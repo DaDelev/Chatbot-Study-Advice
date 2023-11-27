@@ -1,6 +1,8 @@
 import scrapy
 from pathlib import Path
 
+SCRAPED_DATA_PATH = "../data/scraped_data/"
+
 
 class PdfSpider(scrapy.Spider):
     name = "pdf_spider"
@@ -42,7 +44,7 @@ class PdfSpider(scrapy.Spider):
             # Download HTML
             page = "_".join(response.url.rstrip("/").split("/")[2:])
             filename = f"{page}.html"
-            Path("scraped_data/" + filename).write_bytes(response.body)
+            Path(SCRAPED_DATA_PATH + filename).write_bytes(response.body)
             self.log(f"Saved file {page}")
 
             # Find links to all PDF files
