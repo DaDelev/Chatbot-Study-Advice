@@ -5,3 +5,4 @@ test_documents
 docs
 .ipynb_checkpoints
 storage_langchain
+.env
