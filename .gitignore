@@ -3,4 +3,5 @@ storage
 docs
 .ipynb_checkpoints
 storage_langchain
+storage_langchain_w_metadata
 .env
