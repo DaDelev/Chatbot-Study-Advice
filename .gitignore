@@ -5,3 +5,5 @@ docs
 storage_langchain
 storage_langchain_w_metadata
 .env
+data/scraped_data
+data/scraped_data_v2
