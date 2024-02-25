@@ -1,6 +1,5 @@
 from chatbot_prototype import StudyChatBot
 
-
 if __name__ == '__main__':
 
     # init chatbot
@@ -12,10 +11,10 @@ if __name__ == '__main__':
         user_input = input("You: ")
         
         # Check if the user wants to quit
-        if user_input.lower() == 'quit':
+        if user_input.lower() == 'exit':
             print("Exiting Study ChatBot. Goodbye!")
             break
         
         # Get response from the chatbot and display it
-        response = chatbot.query(user_input)
+        response = chatbot.query(user_input)["answer"]
         print("Study ChatBot:", response)
