@@ -1,4 +1,7 @@
 config = {
+    "vectordb_dir" : "storage",
+    "doc_directory" : "../data/scraped_data",
+    
     "metadata" : {
         "metadata_prompt": """Extract relevant information from the following document.
 The document is related to the University of Mannheim. Some documents are only relevant to a specific \

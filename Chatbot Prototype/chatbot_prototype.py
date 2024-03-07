@@ -13,7 +13,7 @@ class StudyChatBot:
     def __init__(self, study_program) -> None:
         
         self.vector_db = Chroma(
-            persist_directory='storage_scaled_w_metadata',
+            persist_directory='storage',
             embedding_function=OpenAIEmbeddings()
             )
         

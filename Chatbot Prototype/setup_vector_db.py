@@ -20,10 +20,10 @@ _ = load_dotenv(find_dotenv())
 from config import config
 
 # dircetory with the scraped documents
-doc_directory = ""
+doc_directory = config["doc_directory"]
 
 # directory to persist vector db
-vectordb_dir = ""   
+vectordb_dir = config["vectordb_dir"]   
 
 llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0125")
 
