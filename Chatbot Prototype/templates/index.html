@@ -113,7 +113,10 @@
 
         var studyPrograms = [
         "Master of Business Informatics", 
-        "Master of Data Science"
+        "Master of Data Science",
+        "Master of Mathematics in Business & Economics",
+        "Bachelor of Business Informatics",
+        "Bachelor of Mathematics in Business & Economics"
         ];
 
         var chatBox = document.getElementById('chat-box');
@@ -153,7 +156,7 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var chatBox = document.getElementById('chat-box');
-                    chatBox.innerHTML += '<p><strong>Chatbot:</strong>Chosen Study Program - ' + studyProgram + '</p>';
+                    chatBox.innerHTML += '<p><strong>Chatbot:</strong>Chosen Study Program - ' + studyProgram + '. How can I help?</p>';
                     chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
                 }
             };
